@@ -1,0 +1,13 @@
+.build
+.direnv
+.west
+.cache
+modules
+firmware
+zephyr
+zmk
+draw/base.yaml
+build
+bin
+zephyr/*
+!zephyr/module.yml
