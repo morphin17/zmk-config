@@ -87,6 +87,9 @@ draw:
     keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/corne.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
     yq -i '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "crkbd/rev1" >"{{ draw }}/base.svg"
+    keymap -c "{{ draw }}/config_ru.yaml" parse -z "{{ config }}/corne.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
+    yq -i '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
+    keymap -c "{{ draw }}/config_ru.yaml" draw "{{ draw }}/base.yaml" -k "crkbd/rev1" >"{{ draw }}/base_ru.svg"
 
 # initialize west
 init:
